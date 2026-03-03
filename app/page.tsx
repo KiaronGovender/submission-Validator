@@ -15,8 +15,6 @@ export default function Home() {
     setResponse(null);
 
     try {
-      // The instruction says: Simply running this in the browser should work.
-      // So we can use a direct fetch or just window.open, but for a form, fetch is better.
       const validationUrl = `https://yhxzjyykdsfkdrmdxgho.supabase.co/functions/v1/application-task?url=${encodeURIComponent(testUrl)}&email=${encodeURIComponent(email)}`;
 
       const res = await fetch(validationUrl);
